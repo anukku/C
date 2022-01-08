@@ -1,3 +1,4 @@
+//suma numerelor folosind pointeri
 #include <stdlib.h>
 #include <stdio.h>
 int *input()
