@@ -4,30 +4,14 @@ int main()
 {
     int x, nr = 0, poz = 0, neg = 0, i, nr_dorit, valoare_adevar = 0; 
     int *p = NULL;
-    
-    scanf("%i", &x);
-    if(x > -1000)
-    {
-        p = (int*)malloc(1*sizeof(int));
-        p[0] = x;
-        nr = 1;
-        if(x >= 0)
-            poz++;
-        else
-            neg++;
-    }
-    if(p == NULL)
-    {
-        printf("Memory not available!");
-        return 1;
-    }
+    p = (int*)malloc(1*sizeof(int));
     scanf("%i", &x);
     while(x > -1000)
     {
         p = (int*)realloc(p,(nr+1)*sizeof(int));
         p[nr] = x;
         nr++;
-        if(x >= 0)
+        if(p[nr] >= 0)
             poz++;
         else
             neg++;
@@ -38,8 +22,9 @@ int main()
     for(i = 0; i < nr; i++)
         if(p[i] == nr_dorit)
             {
-                nr_dorit = i;
+                nr_dorit = i + 1;
                 valoare_adevar = 1;
+                break;
             }
     if(valoare_adevar == 0)
         printf("\nNu exista!");

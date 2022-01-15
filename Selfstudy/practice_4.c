@@ -2,7 +2,6 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-
 void minmax(int arr[], int len, int *min, int *max)
 {
     *min = *max = arr[0];

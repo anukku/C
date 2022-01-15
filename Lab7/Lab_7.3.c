@@ -6,7 +6,7 @@ int main()
     char sir[100];
     int i; 
 
-    scanf("%[^\n]s", & sir);
+    scanf("%[^\n]s", & sir); //[^\n] ca sa imi ia spatii
     for(i = 0; i < strlen(sir); i++)
     {
         if(sir[i] == 'a' || sir[i] == 'e' || sir[i] == 'i' || sir[i] == 'o' || sir[i] == 'u')
